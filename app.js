@@ -8,10 +8,10 @@ const app = express();
 app.use('/api/v1/auth' , authRouter);
 
 
-app.listen(PORT , () => {
+app.listen(PORT , async () => {
     console.log(`Subsciption tracker API is running on http://localhost:${PORT}`);
 
-    connectToDatabase();
+    await connectToDatabase();
 })
 
 export default app;
